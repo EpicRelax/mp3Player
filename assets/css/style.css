@@ -1,0 +1,138 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.player {
+    height: 100vh;
+}
+
+.slider {
+    height: 100vh;
+    width: 100%;
+}
+
+.fullImage, .fullImageNext {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: blur(10px);
+    z-index: -1;
+    transition: all 0.5s;
+}
+
+.fullImageNext {
+    z-index: -2;
+}
+
+.slider img {
+    display: flex;
+    height: 100vh;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    transition: all 0.5s;
+}
+
+.gradient {
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8410714627647934) 60%, rgba(0,0,0,0) 100%);
+    color: white;
+    bottom: 0;
+    padding: 1rem 0;
+}
+
+.title {
+    position: relative;
+    top: 70%;
+    font-size: 2rem;
+    color: white;
+    padding: 4rem 2rem;
+}
+.nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    font-size: 2rem;
+    bottom: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.time {
+    text-align: center;
+}
+
+.timeSlide {
+    position: relative;
+    background-color: lightgrey;
+    height: 0.5rem;
+    width: 80%;
+    margin: 0.5rem auto;
+    border-radius: 30px;
+    top: 72%;
+}
+
+.infos {
+    position: relative;
+    width: 50%;
+    top: 73%;
+    margin: 0.5rem auto;
+    text-align: center;
+}
+
+.moreInfos {
+    text-align: center;
+}
+
+.navVolume {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    font-size: 1.3rem;
+    bottom: 5rem;
+    left: 80%;
+    transform: translate(-30%, -50%);
+}
+
+.playPause, .prev, .next {
+    padding: 0.2rem 1rem;
+}
+
+.playPause:hover, .prev:hover, .next:hover, .volMute:hover, .volDown:hover, .volUp:hover {
+    transform: scale(1.2);
+}
+
+.description {
+    display: none;
+}
+
+@media screen and (max-width:768px) {
+    .slider img {
+        height: 70vh;
+        top: 5%;
+    }
+    .navVolume {
+       width: 20%;     
+    }
+}
+
+@media screen and (max-width:576px) {
+    .slider img {
+        height: 45vh;
+        top: 15%;
+    }
+    
+    .navVolume {
+        display: none;
+    }
+}
+
